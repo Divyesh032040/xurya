@@ -1,18 +1,25 @@
 import React from 'react';
-import Container from './Container';
 import { Outlet } from 'react-router-dom';
-import Navbar from './layout/Navbar'; // Optional, if you have one
-import Footer from './Footer'; // Optional, if needed on all pages
+import Container from './Container';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
 
 const Layout = () => {
   return (
-    <>
-      <Container>
-        <Outlet /> {/* This is where page-specific content will be rendered */}
-      </Container>
+    <div className="flex flex-col min-h-screen">
+      {/* Optional Navbar */}
+      <Navbar />
+
+      {/* Main Content */}
+      <main className="flex-1">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+
       {/* Optional Footer */}
-      <Footer />
-    </>
+      {/* <Footer /> */}
+    </div>
   );
 };
 
