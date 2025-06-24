@@ -27,3 +27,4 @@ project-root/
 ├── package.json
 ├── README.md
 └── vite.config.js | next.config.js | webpack.config.js
+```
